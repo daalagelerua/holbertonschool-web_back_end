@@ -12,7 +12,7 @@ export default class pricing {
 
   set amount(value) {
     if (typeof value !== 'number') {
-      throw TypeError('amount must be a number');
+      throw new TypeError('amount must be a number');
     }
     this._amount = value;
   }
@@ -23,7 +23,7 @@ export default class pricing {
 
   set currency(value) {
     if (!(value instanceof Currency)) {
-      throw TypeError('currency must be a currency');
+      throw new TypeError('currency must be a currency');
     }
     this._currency = value;
   }
