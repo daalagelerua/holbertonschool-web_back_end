@@ -3,8 +3,8 @@ class HolbertonCourse {
     if (typeof name !== "string") {
       throw new Error("name must be a string");
     }
-    if (typeof length !== "number" || length < 0) {
-      throw new Error("length must be a positive number");
+    if (typeof length !== "number") {
+      throw new Error("length must be a number");
     }
     if (!Array.isArray(students) || !students.every(student => typeof student === "string")) {
       throw new Error("students must be an array of strings")
@@ -29,8 +29,8 @@ class HolbertonCourse {
     return this._length;
   }
   set length(value) {
-    if (typeof length !== "number" || length < 0) {
-      throw new Error("length must be a positive number");
+    if (typeof length !== "number") {
+      throw new Error("length must be a number");
     }
     this._length = value;
   }
