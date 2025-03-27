@@ -1,4 +1,4 @@
-export default class Airport {
+class Airport {
   constructor(name, code) {
     this._name = name;
     this._code = code;
@@ -8,3 +8,4 @@ export default class Airport {
     return this._code;
   }
 }
+export default Airport;
