@@ -6,7 +6,7 @@ function handleProfileSignup() {
       console.log(`${uploadPhoto.body} ${user.firstName} ${user.lastName}`);
     })
     .catch(() => {
-      console.log('Sugnup system offline');
+      console.log('Signup system offline');
     });
 }
 
