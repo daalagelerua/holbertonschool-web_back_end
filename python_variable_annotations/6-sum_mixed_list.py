@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-This module is used to calculate the sum of a list of integers and float numbers.
+This module is used to calculate the sum of a list of integers
+and float numbers.
 """
 from typing import List, Union
 
