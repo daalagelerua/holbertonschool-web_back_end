@@ -7,7 +7,7 @@ import asyncio
 import time
 
 
-async def measure_time(n: int, max_delay: int) -> float:
+def measure_time(n: int, max_delay: int) -> float:
     """measure total execution time of wait_n and return average time"""
     # set starting time
     start_time = time.perf_counter()
