@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
 This module is an asynchrone generator that produces
 random floats between 0 and 10 waiting 1 second between
