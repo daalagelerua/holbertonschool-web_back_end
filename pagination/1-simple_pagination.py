@@ -40,27 +40,27 @@ class Server:
         return self.__dataset
 
 
-def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
-    """
-    Returns the page of the dataset based on pagination parameters.
-    """
+    def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+        """
+        Returns the page of the dataset based on pagination parameters.
+        """
 
-    # Verify that both arguments are integers greater than 0
-    assert isinstance(page, int), "page must be an integer"
-    assert page > 0, "page must be positive"
+        # Verify that both arguments are integers greater than 0
+        assert isinstance(page, int), "page must be an integer"
+        assert page > 0, "page must be positive"
 
-    assert isinstance(page_size, int), "page_size must be an integer"
-    assert page_size > 0, "page_size must be positive"
+        assert isinstance(page_size, int), "page_size must be an integer"
+        assert page_size > 0, "page_size must be positive"
 
-    # Get the dataset
-    dataset = self.dataset()
+        # Get the dataset
+        dataset = self.dataset()
 
-    # Calculate start and end indexes
-    start, end = index_range(page, page_size)
+        # Calculate start and end indexes
+        start, end = index_range(page, page_size)
 
-    # Return empty list if indexes are out of range
-    if start >= len(dataset):
-        return []
+        # Return empty list if indexes are out of range
+        if start >= len(dataset):
+            return []
 
-    # Return the appropriate page
-    return dataset[start:end]
+        # Return the appropriate page
+        return dataset[start:end]
