@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 This module insert a new document in a collection
-based on kwargs.
+based on kwargs. (_id is the default primary key for every
+collection in mongodb)
 """
 
 
