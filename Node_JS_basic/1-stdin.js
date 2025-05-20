@@ -10,7 +10,7 @@ process.stdin.setEncoding('utf8');
 process.stdin.on('data', (data) => {
   // Display the user's name
   process.stdout.write(`Your name is: ${data.trim()}\n`);
-  
+
   // If this is not being piped (interactive mode), exit after displaying the name
   if (process.stdin.isTTY) {
     process.exit();
