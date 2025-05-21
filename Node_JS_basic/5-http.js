@@ -62,7 +62,7 @@ const app = http.createServer(async (req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
 
-  const url = req.url;
+  const { url } = req;
 
   if (url === '/') {
     res.end('Hello Holberton School!');
@@ -80,7 +80,7 @@ const app = http.createServer(async (req, res) => {
       // Get student data
       const studentData = await countStudents(dbFilePath);
       responseText += studentData;
-      
+
       res.end(responseText);
     } catch (error) {
       responseText += error.message;
